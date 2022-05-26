@@ -1,0 +1,90 @@
+.fondoDetail{
+    background-color:rgba(139, 134, 134, 0.666);
+    background-size: cover;  /*Escala la imagen al mayor tamaño posible sin estirarla.*/
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+.contenedorGeneral{
+
+    background-color: #88878737 ;
+    box-sizing: border-box;
+    border-radius: 30px;
+    margin: 3rem auto;
+    padding-top: 5px;
+}
+
+.contenedorSecundario{
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.287);
+    box-shadow: 1px 1px 18px #080808;
+    margin-top: 1.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 1.5%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    
+}
+.tituloName{
+    font-weight: bold;
+    font-size: 3.3rem;
+    color: #ffffffea;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.image{
+    
+    width: 40%;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    padding: 0;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.767);
+    border-radius: 20px;
+}
+
+.items{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #050505e3;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+}
+
+.descriptionDetail{
+    color: hsla(0, 0%, 1%, 0.931);
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    align-items: center;
+    min-width: 10px;
+    margin-top: 15px;
+    text-align: justify;
+    padding-right: 3%;
+    padding-left: 5%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.541);
+    padding-bottom: 1%;
+}
+
+.buttonBack{
+    padding: 1rem;
+    background-color: #ffffffde ;
+    color: #101111dc;
+    font-size: 1.5 rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    border: solid 1px #f6f6f6;
+    margin-bottom: 1rem;
+}
+
+.buttonBack:hover{
+    cursor: pointer;
+    background-color: #b6b1b2b9;
+    transform: translateY(-4px);
+}

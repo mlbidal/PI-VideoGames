@@ -1,0 +1,120 @@
+.fondoLoading {
+    background-image: url("./photo-1552820728-8b83bb6b773f.avif");
+    background-size: cover;  /*Escala la imagen al mayor tamaño posible sin estirarla.*/
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+.contenedorCards {
+    display: inline;
+     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    align-items: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.loading {
+    width: 100vw;
+    height: 100vh;
+}
+
+.button {
+    padding: 1rem;
+    font-size: 1.5 rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    border: solid 1px #f33e1e70;
+    margin: 2rem auto;
+    background-color: #20202078 ;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+    color: rgba(0, 0, 0, 0.753);
+    background-color: #fafbfce3;
+}
+
+.contenidoHeader {
+    display: flex;
+    
+    max-width: 120rem;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+}
+
+
+.select {
+    margin: 2rem 0;
+    display: flex;
+    padding: 1rem;
+    width: 10%;
+    background-color: #ffffff63;
+    border-radius: 0.5rem;
+    border: solid 1px #191630;
+    color: #000000ca;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.clase1{
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    display: flex;
+}
+
+.buttonSecond {
+    display: flexbox;
+    padding: 1rem;
+    font-size: 1.5 rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    border: solid 1px #f33e1e70;
+    margin: 2rem auto;
+    background-color: #20202078 ;
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.buttonSecond:hover {
+    cursor: pointer;
+    background-color: #fafbfce3;
+    transform: translateY(-4px);
+    color: rgba(0, 0, 0, 0.753);
+}
+
+.titulo {
+    color: rgba(255, 255, 255, 0.609);
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 3rem auto;
+}
+
+.error {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-size: 2rem;
+    font-weight: bold ;
+    color: #fff; 
+}
+
+.filtrosTarjetas{
+    display: inline-block;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+

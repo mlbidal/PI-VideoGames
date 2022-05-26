@@ -54,7 +54,7 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post('/', async (req , res) => {
-    const {   // lo que reciben por body osea por formulario. 
+    const {   
         name,
         image,
         genres,
@@ -75,7 +75,7 @@ router.post('/', async (req , res) => {
         createdInDb
     })
     const searchGenreDB = await Genre.findAll({ //me traigo los generos y luego comparo por nombre. 
-        //El correcto lo agrego abajo con el "AddGenre()"
+                                                //El correcto lo agrego abajo con el "AddGenre()"
         where: {name: genres},
     });
     createVideoGame.addGenre(searchGenreDB) //le agrego al video game el genero q me traigo de la db
@@ -84,3 +84,26 @@ router.post('/', async (req , res) => {
 
 
 module.exports = router;
+
+/*
+const STATUS_USER_ERROR = 422;
+
+router.delete('/post', (req, res) => {
+  const { id } = req.body;
+
+  if(!id) return res.status(STATUS_USER_ERROR).json({
+    error: "No se recibieron los parámetros necesarios para eliminar un Post"
+  })
+
+  const post = posts.find((post) => post.id === id)
+
+  if(!post) return res.status(STATUS_USER_ERROR).json({
+    error: "El id no corresponde con un Post existente"
+  })
+
+  posts = posts.filter((post) => post.id !== id)
+
+  return res.send({success :true}
+    )
+})
+*/

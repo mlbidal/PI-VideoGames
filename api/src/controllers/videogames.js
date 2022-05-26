@@ -10,17 +10,17 @@ const getApiInfo = async () => {
         const arrVideogames = [];
         let apiUrl = `https://api.rawg.io/api/games?key=${API_KEY}`;
     //cada pagina renderiza 20 video juegos, entonces hago un for hasta 5 paginas
-        for (let i = 0; i < 5; i++) { //i = 1  1<=5
-            let pages = await axios.get(apiUrl); // traeme la info de la api 
+        for (let i = 0; i < 5; i++) { 
+            let pages = await axios.get(apiUrl); 
             pages.data.results?.map((e) => { 
                 arrVideogames.push({
                     id: e.id,
                     name: e.name,
                     image: e.background_image,
-                    genres: e.genres?.map((el) => el.name), //puede tener mas de un genero
+                    genres: e.genres?.map((el) => el.name), 
                     released: e.released,
                     rating: e.rating,
-                    platforms: e.platforms?.map((el) => el.platform.name), //puede tener mas de una plataforma
+                    platforms: e.platforms?.map((el) => el.platform.name), 
                 });
             });
             apiUrl = pages.data.next;
@@ -34,11 +34,10 @@ const getApiInfo = async () => {
 
 
 
-//attributes
-const getDbInfo = async () => { //info de la base de datos.
-    return await Videogame.findAll({ //relaciono el model Videogame con Genre
-        include:{          // usamos el include de sequelize para relacionar los modelos. 
-                           //Si no lo uso, no me traeria los videojuegos con los generos. 
+
+const getDbInfo = async () => { 
+    let getVideoGames = await Videogame.findAll({ 
+        include:{         
             model: Genre, 
             atributes: ['name'],
             through: {
@@ -46,13 +45,19 @@ const getDbInfo = async () => { //info de la base de datos.
             },
         }
     })
+    getVideoGames = getVideoGames.map((e)=> e.toJSON())
+    getVideoGames = getVideoGames.map((e)=> {
+        e.genres = e.genres.map((e)=> e.name)
+        return e
+    })
+    return getVideoGames
 };
 
 const getAllVideogames = async () =>{
-    const apiInfo = await getApiInfo(); //llamo y ejecuto la funcion de la api
-    const dbInfo = await getDbInfo(); //llamo y ejecuto la funcion de la db
+    const apiInfo = await getApiInfo(); 
+    const dbInfo = await getDbInfo(); 
     const infoTotal = dbInfo.concat(apiInfo);
-    return infoTotal; //devuelvo un arreglo con toda la info
+    return infoTotal; 
 }
 
 

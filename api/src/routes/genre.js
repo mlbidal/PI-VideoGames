@@ -10,13 +10,11 @@ const { API_KEY } = process.env;
 // y luego ya utilizarlos desde alli
 
 router.get("/" ,async(req , res) => {
-// me traigo los datos (generos) de la api para guardarlos en la db (genres) y usarlos de la db. 
-//Esto lo deberia hacer 1 sola vez.
     try {
-        const rawg = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)   //entra a la api
+        const rawg = await axios.get(`https://api.rawg.io/api/genres?key=${API_KEY}`)   
         rawg.data.results.forEach((g) => {
             Genre.findOrCreate({ //uso el findOrcreate en lugar del create para q no me duplique la info
-                where:{ //donde el id y el nombre
+                where:{ 
                     id: g.id,
                     name: g.name
                 },
@@ -24,7 +22,7 @@ router.get("/" ,async(req , res) => {
         });
         //El método findAll() nos trae todos los registros de esta tabla y para acceder a 
         //ellos simplemente se ejecuta el método toJSON() que nos da un objeto con la información
-        const allGenre = await Genre.findAll(); //me guardo todas los generos en el modelo de la db
+        const allGenre = await Genre.findAll(); 
         res.json(allGenre);
     } catch (error) {
         res.status(404).json({ error: "Genre not found" })
