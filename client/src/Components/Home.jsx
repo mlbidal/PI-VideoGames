@@ -131,7 +131,7 @@ console.log('soy videogames', allVideoGames)
                             currentVideogames?.map((e) => {
                                 return (
                                     <div key={e.id}>
-                                        { e.error ? <h1>hay un error</h1>: 
+                                        { e.error ? <h1>ERROR!</h1>: 
                                         <Link to={"/home/" + e.id}>
                                             <Card
                                                 name={e.name}

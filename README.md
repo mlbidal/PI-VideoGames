@@ -1,14 +1,6 @@
-<p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
+<h1 align="center">API VIDEOGAMES</h1>
 
-# Individual Project - Henry Videogames
-
-<p align="right">
-  <img height="200" src="./videogame.png" />
-</p>
-
-## Objetivos del Proyecto
+<h3 align="center"> Objetivos del Proyecto:</h3>
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
 - Afirmar y conectar los conceptos aprendidos en la carrera.
@@ -16,49 +8,8 @@
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
 
-## Horarios y Fechas
 
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
-
-## Comenzando
-
- 1. Forkear el repositorio para tener una copia del mismo en sus cuentas
- 2. Clonar el repositorio en sus computadoras para comenzar a trabajar
-
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
-
-__IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
-
-Actualmente las versiónes necesarias son:
-
- * __Node__: 12.18.3 o mayor
- * __NPM__: 6.14.16 o mayor
-
-Para verificar que versión tienen instalada:
-
-> node -v
->
-> npm -v
-
-## BoilerPlate
-
-El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
-
-En `api` crear un archivo llamado: `.env` que tenga la siguiente forma:
-
-```
-DB_USER=usuariodepostgres
-DB_PASSWORD=passwordDePostgres
-DB_HOST=localhost
-```
-
-Reemplazar `usuariodepostgres` y `passwordDePostgres` con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
-
-Adicionalmente será necesario que creen desde psql una base de datos llamada `videogames`
-
-El contenido de `client` fue creado usando: Create React App.
-
-## Enunciado
+ <h3 align="center"> Que se quiere lograr con el proyecto: </h3>
 
 La idea general es crear una aplicación en la cual se puedan ver los distintos videojuegos disponibles junto con información relevante de los mismos utilizando la api externa [rawg](https://rawg.io/apidocs) y a partir de ella poder, entre otras cosas:
 
@@ -66,36 +17,23 @@ La idea general es crear una aplicación en la cual se puedan ver los distintos 
   - Filtrarlos / Ordenarlos
   - Agregar nuevos videojuegos
 
-__IMPORTANTE__: Para poder utilizar esta API externa es necesario crearse una cuenta para obtener una API Key que luego debera ser incluida en todos los request que hagamos a rawg simplemente agregando `?key={YOUR_API_KEY}` al final de cada endpoint. Agregar la clave en el archivo `.env` para que la misma no se suba al repositorio por cuestiones de seguridad y utilizarla desde allí.
 
-__IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden utilizar los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados sino que deben realizarlo ustedes mismos. En particular alguno de los ordenamientos o filtrados debe si o si realizarse desde el frontend.
-
-### Únicos Endpoints/Flags que pueden utilizar
-
-  - GET https://api.rawg.io/api/games
-  - GET https://api.rawg.io/api/games?search={game}
-  - GET https://api.rawg.io/api/genres
-  - GET https://api.rawg.io/api/games/{id}
-
-### Requerimientos mínimos:
-
-A continuación se detallaran los requerimientos mínimos para la aprobación del proyecto individial. Aquellos que deseen agregar más funcionalidades podrán hacerlo. En cuanto al diseño visual no va a haber wireframes ni prototipos prefijados sino que tendrán libertad de hacerlo a su gusto pero tienen que aplicar los conocimientos de estilos vistos en el curso para que quede agradable a la vista.
-
-__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
-
-#### Tecnologías necesarias:
+  <h3 align="center">Tecnologías necesarias:</h3>
 - [ ] React
 - [ ] Redux
 - [ ] Express
 - [ ] Sequelize - Postgres
+- [ ] CSS Puro
 
-#### Frontend
+<h3  align="left">Frontend</h3>
 
-Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
+CARACTERISTICAS:
 
 __Pagina inicial__: deben armar una landing page con
 - [ ] Alguna imagen de fondo representativa al proyecto
 - [ ] Botón para ingresar al home (`Ruta principal`)
+
+<!-- ![landing](https://user-images.githubusercontent.com/82724532/177237789-be316c08-447c-4d62-a436-24d0b5edbef6.jpg) -->
 
 __Ruta principal__: debe contener
 - [ ] Input de búsqueda para encontrar videojuegos por nombre
@@ -107,7 +45,8 @@ __Ruta principal__: debe contener
 - [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los videojuegos por orden alfabético y por rating
 - [ ] Paginado para ir buscando y mostrando los siguientes videojuegos, 15 juegos por pagina, mostrando los primeros 15 en la primer pagina.
 
-__IMPORTANTE__: Dentro de la Ruta Principal se deben mostrar tanto los videjuegos traidos desde la API como así también los de la base de datos. Debido a que en la API existen alrededor de 500 mil juegos, por cuestiones de performance pueden tomar la simplificación de obtener y paginar los primeras 100.
+
+<!-- ![home](https://user-images.githubusercontent.com/82724532/177238394-fa5978d7-0465-4977-a09f-16db25de14e3.jpg) -->
 
 __Ruta de detalle de videojuego__: debe contener
 - [ ] Los campos mostrados en la ruta principal para cada videojuegos (imagen, nombre, y géneros)
@@ -115,6 +54,8 @@ __Ruta de detalle de videojuego__: debe contener
 - [ ] Fecha de lanzamiento
 - [ ] Rating
 - [ ] Plataformas
+
+<!-- ![detalle](https://user-images.githubusercontent.com/82724532/177237856-b44175e7-168c-44f9-92e2-9513c093f2e8.jpg) -->
 
 __Ruta de creación de videojuegos__: debe contener
 - [ ] Un formulario __controlado con JavaScript__ con los siguientes campos:
@@ -126,11 +67,28 @@ __Ruta de creación de videojuegos__: debe contener
 - [ ] Posibilidad de seleccionar/agregar varias plataformas
 - [ ] Botón/Opción para crear un nuevo videojuego
 
-> Es requisito que el formulario de creación esté validado con JavaScript y no sólo con validaciones HTML. Pueden agregar las validaciones que consideren. Por ejemplo: Que el nombre del juego no pueda contener algunos símbolos, que el rating no pueda exceder determinado valor, etc.
+<!-- ![creacion](https://user-images.githubusercontent.com/82724532/177237964-e8085e9f-6160-43d4-bce2-f5f48a24db1b.jpg) -->
 
-#### Base de datos
+> El formulario de creación está validado con JavaScript y no sólo con validaciones HTML. 
+__Componentes de Not Found:
+ - [ ] Componentes para renderizar cuando no hay resultados de la búsqueda
+ - No se encuentra receta ni id
 
-El modelo de la base de datos deberá tener las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
+<!-- ![notfoundrecipe](https://user-images.githubusercontent.com/82724532/177237983-7a57856e-bdb4-4c0b-a658-237d8b5f0a01.jpg) -->
+
+- Se ingresa una ruta que no existe.
+
+<!-- ![notfoundpage](https://user-images.githubusercontent.com/82724532/177238001-56b68fb0-11ad-4407-bf33-9888686a4ba5.jpg) -->
+
+<h3  align="left">Base de datos</h3>
+
+TECNOLOGÍAS NECESARIAS:
+
+- [ ] PostgreSQL
+
+CARACTERISTICAS:
+
+El modelo de la base de datos tiene las siguientes entidades:
 
 - [ ] Videojuego con las siguientes propiedades:
   - ID: * No puede ser un ID de un videojuego ya existente en la API rawg
@@ -143,15 +101,15 @@ El modelo de la base de datos deberá tener las siguientes entidades (Aquellas p
   - ID
   - Nombre
 
-La relación entre ambas entidades debe ser de muchos a muchos ya que un videojuego puede pertenecer a varios géneros en simultaneo y, a su vez, un género puede contener múltiples videojuegos distintos. Un ejemplo sería el juego `Counter Strike` pertenece a los géneros Shooter y Action al mismo tiempo. Pero a su vez existen otros videojuegos considerados como Shooter o como Action.
 
-__IMPORTANTE__: Pensar como modelar los IDs de los videojuegos en la base de datos. Existen distintas formas correctas de hacerlo pero tener en cuenta que cuando hagamos click en algun videojuego, este puede provenir de la API o de la Base de Datos por lo que cuando muestre su detalle no debería haber ambigüedad en cual se debería mostrar. Por ejemplo si en la API el videojuego `Age of Empires II: Age of Kings` tiene id = 1 y en nuestra base de datos creamos un nuevo videojuego `Age of Henry` con id = 1, ver la forma de diferenciarlos cuando querramos acceder al detalle del mismo.
+<h3  align="left">Backend</h3>
 
-#### Backend
+TECNOLOGÍAS NECESARIAS:
 
-Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
+- [ ] Node JS
+- [ ] Express
+- [ ] Sequelize
 
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
 
 - [ ] __GET /videogames__:
   - Obtener un listado de los videojuegos
@@ -170,8 +128,3 @@ __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y pagin
   - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de videojuego por body
   - Crea un videojuego en la base de datos
 
-
-#### Testing
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
